@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Order Management Dashboard</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <!-- Sidebar -->
+      <aside class="sidebar">
+        <header class="sidebar-header">
+          <h2 class="logo">OrderHub</h2>
+        </header>
+
+        <nav class="sidebar-nav">
+          <a href="#" class="nav-item active">
+            <strong>Orders</strong>
+          </a>
+          <a href="#" class="nav-item">
+            <strong>Customers</strong>
+          </a>
+          <a href="#" class="nav-item">
+            <strong>Analytics</strong>
+          </a>
+          <a href="#" class="nav-item">
+            <strong>Settings</strong>
+          </a>
+        </nav>
+
+        <!-- Customer Info Card -->
+        <section class="customer-card">
+          <div class="customer-header">
+            <h3>Current Customer</h3>
+          </div>
+          <div class="customer-info">
+            <div class="customer-avatar">JD</div>
+            <div class="customer-details">
+              <p class="customer-name">John Developer</p>
+              <p class="customer-email">john@techco.com</p>
+            </div>
+          </div>
+          <div class="customer-stats">
+            <div class="stat">
+              <p class="stat-label">Total Orders</p>
+              <p class="stat-value">24</p>
+            </div>
+            <div class="stat">
+              <p class="stat-label">Spent</p>
+              <p class="stat-value">$3,240</p>
+            </div>
+          </div>
+          <div class="customer-meta">
+            <p><strong>Phone:</strong> +1 (555) 123-4567</p>
+            <p><strong>Location:</strong> San Francisco, CA</p>
+            <p><strong>Joined:</strong> Jan 15, 2024</p>
+          </div>
+        </section>
+
+        <!-- Quick Stats -->
+        <section class="quick-stats">
+          <div class="stat-box">
+            <p class="stat-box-label">Pending</p>
+            <p class="stat-box-value pending">3</p>
+          </div>
+          <div class="stat-box">
+            <p class="stat-box-label">Shipped</p>
+            <p class="stat-box-value shipped">18</p>
+          </div>
+          <div class="stat-box">
+            <p class="stat-box-label">Cancelled</p>
+            <p class="stat-box-value cancelled">3</p>
+          </div>
+        </section>
+      </aside>
+
+      <!-- Main Content -->
+      <main class="main-content">
+        <!-- Header -->
+        <header class="dashboard-header">
+          <div class="header-left">
+            <h1>Orders</h1>
+            <p class="header-subtitle">Manage and track all customer orders</p>
+          </div>
+          <div class="header-right">
+            <button class="btn-primary">+ New Order</button>
+          </div>
+        </header>
+
+        <!-- Filters -->
+        <section class="filters">
+          <input
+            type="search"
+            class="search-box"
+            placeholder="Search orders by ID or customer..."
+          />
+          <div class="filter-group">
+            <select class="filter-select">
+              <option>All Status</option>
+              <option>Shipped</option>
+              <option>Pending</option>
+              <option>Cancelled</option>
+            </select>
+            <select class="filter-select">
+              <option>All Dates</option>
+              <option>Today</option>
+              <option>This Week</option>
+              <option>This Month</option>
+            </select>
+          </div>
+        </section>
+
+        <!-- Orders Table -->
+        <section class="orders-section">
+          <table class="orders-table">
+            <thead>
+              <tr>
+                <th>Order ID</th>
+                <th>Customer</th>
+                <th>Date</th>
+                <th>Amount</th>
+                <th>Status</th>
+                <th>Action</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>
+                  <code class="order-id">#ORD-2024-001</code>
+                </td>
+                <td>
+                  <div class="customer-cell">
+                    <strong>Sarah Johnson</strong>
+                  </div>
+                </td>
+                <td>Nov 18, 2024</td>
+                <td><strong>$1,299.00</strong></td>
+                <td>
+                  <span class="badge shipped">Shipped</span>
+                </td>
+                <td>
+                  <button class="btn-action">View</button>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <code class="order-id">#ORD-2024-002</code>
+                </td>
+                <td>
+                  <div class="customer-cell">
+                    <strong>Michael Chen</strong>
+                  </div>
+                </td>
+                <td>Nov 17, 2024</td>
+                <td><strong>$2,450.50</strong></td>
+                <td>
+                  <span class="badge shipped">Shipped</span>
+                </td>
+                <td>
+                  <button class="btn-action">View</button>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <code class="order-id">#ORD-2024-003</code>
+                </td>
+                <td>
+                  <div class="customer-cell">
+                    <strong>Emma Davis</strong>
+                  </div>
+                </td>
+                <td>Nov 16, 2024</td>
+                <td><strong>$875.99</strong></td>
+                <td>
+                  <span class="badge pending">Pending</span>
+                </td>
+                <td>
+                  <button class="btn-action">View</button>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <code class="order-id">#ORD-2024-004</code>
+                </td>
+                <td>
+                  <div class="customer-cell">
+                    <strong>James Wilson</strong>
+                  </div>
+                </td>
+                <td>Nov 15, 2024</td>
+                <td><strong>$599.00</strong></td>
+                <td>
+                  <span class="badge cancelled">Cancelled</span>
+                </td>
+                <td>
+                  <button class="btn-action">View</button>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <code class="order-id">#ORD-2024-005</code>
+                </td>
+                <td>
+                  <div class="customer-cell">
+                    <strong>Lisa Martinez</strong>
+                  </div>
+                </td>
+                <td>Nov 14, 2024</td>
+                <td><strong>$3,120.75</strong></td>
+                <td>
+                  <span class="badge shipped">Shipped</span>
+                </td>
+                <td>
+                  <button class="btn-action">View</button>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <code class="order-id">#ORD-2024-006</code>
+                </td>
+                <td>
+                  <div class="customer-cell">
+                    <strong>Robert Taylor</strong>
+                  </div>
+                </td>
+                <td>Nov 13, 2024</td>
+                <td><strong>$450.00</strong></td>
+                <td>
+                  <span class="badge pending">Pending</span>
+                </td>
+                <td>
+                  <button class="btn-action">View</button>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <code class="order-id">#ORD-2024-007</code>
+                </td>
+                <td>
+                  <div class="customer-cell">
+                    <strong>Amanda Brown</strong>
+                  </div>
+                </td>
+                <td>Nov 12, 2024</td>
+                <td><strong>$2,100.00</strong></td>
+                <td>
+                  <span class="badge shipped">Shipped</span>
+                </td>
+                <td>
+                  <button class="btn-action">View</button>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <code class="order-id">#ORD-2024-008</code>
+                </td>
+                <td>
+                  <div class="customer-cell">
+                    <strong>Kevin Anderson</strong>
+                  </div>
+                </td>
+                <td>Nov 11, 2024</td>
+                <td><strong>$1,650.25</strong></td>
+                <td>
+                  <span class="badge pending">Pending</span>
+                </td>
+                <td>
+                  <button class="btn-action">View</button>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </section>
+
+        <!-- Pagination -->
+        <footer class="pagination">
+          <p class="pagination-info">Showing 8 of 24 orders</p>
+          <div class="pagination-controls">
+            <button class="btn-pagination" disabled>← Previous</button>
+            <div class="pagination-numbers">
+              <button class="page-number active">1</button>
+              <button class="page-number">2</button>
+              <button class="page-number">3</button>
+            </div>
+            <button class="btn-pagination">Next →</button>
+          </div>
+        </footer>
+      </main>
+    </div>
+  </body>
+</html>
